@@ -1,5 +1,5 @@
-import 'package:emebet/features/auth/auth_injection.dart';
-import 'package:emebet/shared/app_injections.dart';
+import '../../features/auth/auth_injection.dart';
+import '../../shared/app_injections.dart'; 
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,4 +1,4 @@
-import 'package:emebet/shared/presentation/widgets/menu_item.dart';
+import '../../../shared/presentation/widgets/menu_item.dart';
 import 'package:flutter/material.dart';
 
 class ProfileMenuItem extends StatelessWidget {

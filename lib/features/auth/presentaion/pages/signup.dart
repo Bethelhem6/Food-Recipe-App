@@ -1,21 +1,20 @@
-import 'package:emebet/core/utils/log/app_logger.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_bloc.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_event.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_state.dart';
-import 'package:emebet/features/auth/presentaion/pages/login.dart';
-import 'package:emebet/features/auth/presentaion/pages/verification.dart';
-import 'package:emebet/shared/presentation/snackbar/error_message.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mvvm/features/auth/presentaion/pages/login.dart';
+import 'package:mvvm/features/auth/presentaion/pages/verification.dart';
 
+import '../../../../core/utils/log/app_logger.dart';
 import '../../../../core/utils/validators/phone_number_validator.dart';
+import '../../../../shared/presentation/snackbar/error_message.dart';
 import '../../../../shared/presentation/widgets/app_bar.dart';
 import '../../../../shared/presentation/widgets/custom_botton.dart';
 import '../../../../shared/presentation/widgets/cutom_text.dart';
 import '../../../../shared/presentation/widgets/phone_number_text_field.dart';
 import '../../domain/models/auth_use_case.dart';
 import '../../domain/models/screen_arguments.dart';
+import '../bloc/auth_bloc.dart';
+import '../bloc/auth_state.dart';
 
 class SignupScreen extends StatefulWidget {
   static const String routeName = "SignupScreen";
@@ -107,14 +106,7 @@ class _SignupScreenState extends State<SignupScreen> {
   }
 
   void onContinue() {
-    if (_formKey.currentState?.validate() ?? false) {
-      context.read<AuthBloc>().add(
-            AuthCheckPhoneNumber(
-              phoneNumber:
-                  "+251${phoneNumberController.text.replaceAll("-", '')}",
-            ),
-          );
-    }
+    if (_formKey.currentState?.validate() ?? false) {}
   }
 
   void onGoBack() {

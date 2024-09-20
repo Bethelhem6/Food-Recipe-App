@@ -1,18 +1,18 @@
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_bloc.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_state.dart';
-import 'package:emebet/shared/presentation/snackbar/error_message.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/styles/app_colors.dart';
 import '../../../../core/utils/validators/password_validator.dart';
+import '../../../../shared/presentation/snackbar/error_message.dart';
 import '../../../../shared/presentation/widgets/app_bar.dart';
 import '../../../../shared/presentation/widgets/custom_botton.dart';
 import '../../../../shared/presentation/widgets/cutom_text.dart';
 import '../../../../shared/presentation/widgets/password_text_field.dart';
 import '../../domain/models/auth_use_case.dart';
+import '../bloc/auth_bloc.dart';
 import '../bloc/auth_event.dart';
+import '../bloc/auth_state.dart';
 
 class PasswordScreen extends StatefulWidget {
   static const String routeName = "PasswordScreen";
@@ -48,9 +48,6 @@ class _PasswordScreenState extends State<PasswordScreen> {
         _formKey.currentState?.save();
 
         widget.registrationParam.password = passwordController.text;
-        context.read<AuthBloc>().add(
-              AuthRegisterParent(param: widget.registrationParam),
-            );
       }
     } catch (_) {}
   }
@@ -183,7 +180,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500),
                                   text:
-                                      "By clicking 'Create Account,' you acknowledge that you have read and agreed to Linq's "),
+                                      "By clicking 'Create Account,' you acknowledge that you have read and agreed to  Mvvm's "),
                               TextSpan(
                                 style: const TextStyle(
                                     color: AppColors.primaryColor,

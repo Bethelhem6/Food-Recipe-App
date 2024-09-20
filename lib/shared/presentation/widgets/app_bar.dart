@@ -1,5 +1,5 @@
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/shared/presentation/widgets/cutom_text.dart';
+import '../../../core/styles/app_colors.dart';
+import '../../../shared/presentation/widgets/cutom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -21,7 +21,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   PreferredSizeWidget build(BuildContext context) {
-  
     return AppBar(
       centerTitle: centerTitle,
       backgroundColor: Colors.transparent,

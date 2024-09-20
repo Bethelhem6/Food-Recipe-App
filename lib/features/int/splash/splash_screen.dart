@@ -1,17 +1,19 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:emebet/core/local_storage/local_storage.dart';
-import 'package:emebet/core/local_storage/tokens.dart';
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/features/auth/presentaion/pages/login.dart';
-import 'package:emebet/features/int/onboarding/presentation/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jailbreak_root_detection/jailbreak_root_detection.dart';
+import 'package:mvvm/core/utils/constant/app_assets.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
 import 'package:root_tester/root_tester.dart';
+
+import '../../../core/local_storage/local_storage.dart';
+import '../../../core/local_storage/tokens.dart';
+import '../../../core/styles/app_colors.dart';
+import '../../auth/presentaion/pages/login.dart';
+import '../onboarding/presentation/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -163,7 +165,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryGreen,
+      backgroundColor: AppColors.white,
       body: Center(
         child: AnimatedBuilder(
             animation: _animation!,
@@ -172,11 +174,9 @@ class _SplashScreenState extends State<SplashScreen>
                 offset: _animation!.value,
                 child: Opacity(
                   opacity: _animationController!.value,
-                  child: SvgPicture.asset("assets/images/emebetLogo1.svg",
-                      colorFilter: const ColorFilter.mode(
-                        Colors.white,
-                        BlendMode.srcATop,
-                      )),
+                  child: Container(
+                    child: Image.asset(AppAssets.logo),
+                  ),
                 ),
               );
             }),

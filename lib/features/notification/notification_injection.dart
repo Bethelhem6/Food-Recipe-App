@@ -1,5 +1,4 @@
-import 'package:emebet/core/utils/injections.dart';
-
+import '../../core/utils/injections.dart'; 
 import '../../core/network/dio_network.dart';
 import 'data/data_sources/remote/notifications_impl_api.dart';
 import 'data/repositories/notifications_repo_impl.dart';

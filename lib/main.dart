@@ -1,7 +1,9 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:emebet/core/router/router.dart';
-import 'package:emebet/core/utils/bloc_providers.dart';
-import 'package:emebet/features/int/splash/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:mvvm/firebase_options.dart';
+import '../../../core/router/router.dart';
+import '../../../core/utils/bloc_providers.dart';
+import '../features/int/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,9 +15,9 @@ import 'core/utils/injections.dart';
 final navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-    // options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await initInjections();
   runApp(
     DevicePreview(
@@ -64,7 +66,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             providers: providers(),
             child: MaterialApp(
               key: navigatorKey,
-              title: 'emebet',
+              title: 'mvvm',
               scaffoldMessengerKey: snackBarKey,
               onGenerateRoute: AppRouter.generateRoute,
               theme: appTheme,

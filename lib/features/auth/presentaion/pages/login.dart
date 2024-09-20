@@ -1,26 +1,26 @@
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/core/utils/constant/app_assets.dart';
-import 'package:emebet/core/utils/validators/validators.dart';
-import 'package:emebet/features/auth/domain/function/get_fcm_id.dart';
-import 'package:emebet/features/auth/domain/models/login_param.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_bloc.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_event.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_state.dart';
-import 'package:emebet/features/auth/presentaion/pages/signup.dart';
-import 'package:emebet/shared/presentation/widgets/custom_textfield.dart';
-import 'package:emebet/shared/presentation/widgets/cutom_text.dart';
-import 'package:emebet/shared/presentation/widgets/password_text_field.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mvvm/features/auth/presentaion/pages/signup.dart';
 
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/utils/constant/app_assets.dart';
 import '../../../../core/utils/validators/password_validator.dart';
+import '../../../../core/utils/validators/validators.dart';
 import '../../../../shared/presentation/snackbar/error_message.dart';
 import '../../../../shared/presentation/widgets/custom_botton.dart';
+import '../../../../shared/presentation/widgets/custom_textfield.dart';
+import '../../../../shared/presentation/widgets/cutom_text.dart';
 import '../../../../shared/presentation/widgets/gap.dart';
+import '../../../../shared/presentation/widgets/password_text_field.dart';
+import '../../domain/function/get_fcm_id.dart';
+import '../../domain/models/login_param.dart';
 import '../../domain/models/screen_arguments.dart';
+import '../bloc/auth_bloc.dart';
+import '../bloc/auth_event.dart';
+import '../bloc/auth_state.dart';
 import '../widgets/do_you_have_account.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           alignment: Alignment.center,
                           margin: EdgeInsets.only(top: 50.h),
                           child: const CustomText(
-                            title: "LINQ",
+                            title: " Mvvm",
                             fontSize: 45,
                             textColor: AppColors.primaryColor,
                           )),

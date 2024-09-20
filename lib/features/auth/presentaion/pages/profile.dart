@@ -1,23 +1,24 @@
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/core/utils/constant/app_assets.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_bloc.dart';
-import 'package:emebet/features/auth/presentaion/bloc/auth_state.dart';
-import 'package:emebet/features/auth/presentaion/pages/change_password.dart';
-import 'package:emebet/features/auth/presentaion/pages/login.dart';
-import 'package:emebet/features/auth/presentaion/pages/update_profile.dart';
-import 'package:emebet/shared/presentation/snackbar/error_message.dart';
+ 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mvvm/features/auth/presentaion/pages/change_password.dart';
+import 'package:mvvm/features/auth/presentaion/pages/login.dart';
+import 'package:mvvm/features/auth/presentaion/pages/update_profile.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/utils/constant/app_assets.dart';
+import '../../../../shared/presentation/snackbar/error_message.dart';
 import '../../../../shared/presentation/widgets/app_bar.dart';
 import '../../../../shared/presentation/widgets/profile_menu_item.dart';
 import '../../../../shared/presentation/widgets/show_custom_dialog.dart';
 import '../../../feedback/presentation/pages/delete_account.dart';
+import '../bloc/auth_bloc.dart';
 import '../bloc/auth_event.dart';
+import '../bloc/auth_state.dart';
 
 class Profile extends StatefulWidget {
   static const String routeName = "profile";
@@ -205,7 +206,6 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           const Divider(),
-        
           ProfileMenuItem(
               icon: AppAssets.users,
               onTap: () {

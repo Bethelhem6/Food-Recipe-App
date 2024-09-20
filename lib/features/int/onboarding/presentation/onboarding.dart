@@ -1,11 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/core/styles/app_font_size.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mvvm/core/utils/constant/app_assets.dart';
+import 'package:mvvm/features/auth/presentaion/pages/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/styles/app_font_size.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -20,7 +23,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   // CarouselController buttonCarouselController = CarouselController();
   List<Map> items = [
     {
-      "image": "assets/images/splash1.png",
+      "image": AppAssets.onboarding1,
       "title": "Safe Hire",
       "description": const Column(
         children: [
@@ -42,7 +45,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       )
     },
     {
-      "image": "assets/images/splash2.png",
+      "image": AppAssets.onboarding2,
       "title": "Instant Hiring",
       "description": const Column(
         children: [
@@ -64,7 +67,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       )
     },
     {
-      "image": "assets/images/splash3.png",
+      "image": AppAssets.onboarding3,
       "title": "Transparent Pricing",
       "description": const Column(
         children: [
@@ -138,10 +141,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Container(
                   height: 300,
                   width: 340,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/vector.png"),
-                          fit: BoxFit.cover)),
+                  // decoration:   BoxDecoration(
+                  //     image: DecorationImage(
+                  //         image: AssetImage(AppAssets.vector),
+                  //         fit: BoxFit.cover)),
                 ),
               ),
               CarouselSlider(
@@ -206,11 +209,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                         TextButton(
                           onPressed: () {
-                            //   Navigator.pushAndRemoveUntil(
-                            //       context,
-                            //       customPageRoute(
-                            //           const LanguageSelectionScreen()),
-                            //       (route) => false);
+                            Navigator.pushNamedAndRemoveUntil(context,
+                                LoginScreen.routeName, (route) => false);
                           },
                           child: const Text(
                             "Sign in",

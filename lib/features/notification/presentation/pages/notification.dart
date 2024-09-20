@@ -1,6 +1,6 @@
-import 'package:emebet/core/styles/app_colors.dart';
-import 'package:emebet/core/utils/constant/app_assets.dart';
-import 'package:emebet/features/notification/domain/models/notification_param.dart';
+import '../../../../core/styles/app_colors.dart';
+import '../../../../core/utils/constant/app_assets.dart';
+import '../../../../features/notification/domain/models/notification_param.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

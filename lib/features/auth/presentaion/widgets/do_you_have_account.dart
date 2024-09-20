@@ -1,6 +1,9 @@
-import 'package:emebet/core/styles/app_colors.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/styles/app_colors.dart';
+import '../../domain/models/screen_arguments.dart';
+import '../pages/signup.dart';
 
 class DoYouHaveAccount extends StatelessWidget {
   const DoYouHaveAccount({
@@ -29,11 +32,11 @@ class DoYouHaveAccount extends StatelessWidget {
               text: "Sign up",
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  // Navigator.pushNamed(context, SignupScreen.routeName,
-                  //     arguments: RegisterArguments(fromScreen: 'signup')
+                  Navigator.pushNamed(context, SignupScreen.routeName,
+                      arguments: RegisterArguments(fromScreen: 'signup')
 
                       // {"from": "signup"},
-                      // );
+                      );
                 },
             ),
           ],

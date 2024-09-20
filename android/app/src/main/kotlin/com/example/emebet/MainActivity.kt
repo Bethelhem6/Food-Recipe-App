@@ -1,4 +1,4 @@
-package com.example.emebet
+package com.vintage.mvvm
 
 import io.flutter.embedding.android.FlutterActivity
 

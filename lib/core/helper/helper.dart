@@ -1,5 +1,5 @@
-import 'package:emebet/shared/data/data_sources/app_shared_prefs.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mvvm/shared/data/data_sources/app_shared_prefs.dart';
 
 import '../utils/constant/app_constants.dart';
 import '../utils/injections.dart';

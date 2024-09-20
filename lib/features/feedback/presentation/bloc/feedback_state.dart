@@ -1,5 +1,7 @@
-import 'package:emebet/core/network/error/failures.dart';
+ 
 import 'package:equatable/equatable.dart';
+
+import '../../../../core/network/error/failures.dart';
 
 abstract class FeedbackState extends Equatable {}
 
@@ -28,24 +30,4 @@ class FeedbackSendFeedbackFaulire extends FeedbackState {
   @override
   List<Object?> get props => [];
 }
-
-///////////////////////////////////////////////////////////
-///     AnnounceDriverEvent
-class AnnounceDriverEventLoading extends FeedbackState {
-  @override
-  List<Object?> get props => [];
-}
-
-class AnnounceDriverEventSuccess extends FeedbackState {
-  final bool logout;
-  AnnounceDriverEventSuccess({required this.logout});
-  @override
-  List<Object?> get props => [];
-}
-
-class AnnounceDriverEventFaulire extends FeedbackState {
-  final Failure failure;
-  AnnounceDriverEventFaulire({required this.failure});
-  @override
-  List<Object?> get props => [];
-}
+ 

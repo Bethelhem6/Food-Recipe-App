@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:emebet/core/utils/utils.dart';
-import 'package:emebet/features/notification/domain/repository/abstract_notifications_repository.dart';
-
+import '../../../../core/utils/utils.dart';
+import '../../domain/repository/abstract_notifications_repository.dart'; 
 import '../../../../core/network/error/exceptions.dart';
 import '../../../../core/network/error/failures.dart';
 import '../../domain/models/notification_param.dart';

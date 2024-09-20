@@ -1,4 +1,4 @@
-import 'package:emebet/features/feedback/data/model/kid.dart';
+  
 
 class RegistrationParam {
   String? name;
@@ -7,7 +7,6 @@ class RegistrationParam {
   String? phoneNumber;
   String? password;
   String? gender;
-  Address? address;
   double? lng;
   double? lat;
 
@@ -18,7 +17,6 @@ class RegistrationParam {
     this.phoneNumber,
     this.password,
     this.gender,
-    this.address,
     this.lng,
     this.lat,
   });
@@ -31,7 +29,6 @@ class RegistrationParam {
       phoneNumber: json['phoneNumber'],
       password: json['password'],
       gender: json['gender'],
-      address: Address.fromJson(json['address']),
       lng: json['lng'].toDouble(),
       lat: json['lat'].toDouble(),
     );
@@ -48,7 +45,6 @@ class RegistrationParam {
       'gender': gender,
       'lng': lng,
       'lat': lat,
-      "address": address?.toJson()
     };
   }
 }

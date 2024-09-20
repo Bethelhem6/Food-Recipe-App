@@ -1,7 +1,7 @@
-import 'package:dartz/dartz.dart';
-import 'package:emebet/core/utils/utils.dart';
+import 'package:dartz/dartz.dart'; 
 
 import '../../../../core/utils/usecases/usecase.dart';
+import '../../../../core/utils/utils.dart';
 import '../models/announce_driver.dart';
 import '../models/feedback_param.dart';
 import '../repository/abstract_feedback_repository.dart';
@@ -20,12 +20,5 @@ class FeedBackUsecase extends UseCase {
     });
   }
 
-  ResultFuture<bool> announceDriver(AnnounceDriverParam param) async {
-    final result = await repository.announceDriver(param);
-    return result.fold((l) {
-      return Left(l);
-    }, (r) async {
-      return Right(r);
-    });
-  }
+  
 }

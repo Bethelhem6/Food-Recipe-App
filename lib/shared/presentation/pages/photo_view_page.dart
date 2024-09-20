@@ -1,10 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:emebet/shared/presentation/pages/background_page.dart';
-import 'package:emebet/shared/presentation/widgets/arrow_back_button_widget.dart';
+import '../../../../shared/presentation/pages/background_page.dart';
+import '../../../../shared/presentation/widgets/arrow_back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:photo_view/photo_view.dart';
-
 
 class PhotoViewPage extends StatefulWidget {
   final String path;

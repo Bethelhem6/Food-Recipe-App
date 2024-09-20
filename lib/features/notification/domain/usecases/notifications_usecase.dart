@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:emebet/core/utils/utils.dart';
-import 'package:emebet/features/notification/data/model/notification.dart';
-import 'package:emebet/features/notification/domain/models/notification_param.dart';
-import 'package:emebet/features/notification/domain/repository/abstract_notifications_repository.dart';
+import 'package:mvvm/features/notification/data/model/notification.dart';
+import '../../../../core/utils/utils.dart'; 
 
 import '../../../../core/utils/usecases/usecase.dart';
+import '../models/notification_param.dart';
+import '../repository/abstract_notifications_repository.dart';
 
 class NotificationsUsecase extends UseCase {
   final AbstractNotificationsRepository repository;

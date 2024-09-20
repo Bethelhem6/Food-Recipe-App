@@ -1,8 +1,7 @@
-
-import 'package:emebet/features/notification/domain/models/notification_param.dart';
+import '../../../features/notification/domain/models/notification_param.dart';
 
 const String apiUrl = "http://192.168.1.15:8007/api/";
-// const String apiUrl = "https://linq-lm75.onrender.com/api/";
+// const String apiUrl = "https:// Mvvm-lm75.onrender.com/api/";
 
 // String baseUrl = "http://192.168.1.2:8001/";
 ////////////////////////////////////////////////////////////////
@@ -15,40 +14,6 @@ class AuthEndpoint {
 
   static String refreshToken() {
     return "auth/refresh";
-  }
-
-  static String getChildByParentId(String parentId) {
-    String query =
-        'includes[]=busStop&includes[]=busStop.stations&includes[]=stations.route&includes[]=route.vehicle&includes[]=vehicle.driver';
-    return "parents/get-kids-with-parent-id/$parentId?$query";
-  }
-
-  static String updateParent() {
-    return "parents/update-parent";
-  }
-
-  static String getParent(String parentId) {
-    return "parents/get-parent/$parentId";
-  }
-
-  static String checkParent(String phoneNumber) {
-    return "parents/check-parent?phoneNumber=$phoneNumber";
-  }
-
-  static String getKidByCity(String commonName) {
-    return "parents/get-kids-by-common-name?commonName=$commonName";
-  }
-
-  static String assignKid() {
-    return "parents/assign-kid";
-  }
-
-  static String unassignKid() {
-    return "parents/unassign-kid";
-  }
-
-  static String registerParent() {
-    return "parents/register-parent";
   }
 
   static String changePassword() {
@@ -78,30 +43,7 @@ class FeedBackEndpoint {
   }
 }
 
-////////////////////////////////////////////////////////////////
-///
-///   TRIP END POINT
-
-class TripEndPoint {
-  static String getRoutes(String routeId) {
-    // String filter =
-    //     "includes[0]=stations&includes[1]=stations.busStop&includes[2]=busStop.kid&includes[3]=bookings";
-    String filter = "includes[0]=stations&includes[1]=stations";
-
-    return "routes/get-route/$routeId?$filter";
-  }
-
-  static String getBookings(String kidId, String routeId) {
-    String includes =
-        '&includes[]=kid&includes[]=route&includes[]=route.stations&includes[]=stations.busStop';
-    String filter =
-        "?filter[0][0][field]=kidId&filter[0][0][operator]==&filter[0][0][value]=$kidId&filter[0][1][field]=routeId&filter[0][1][operator]==&filter[0][1][value]=$routeId&filter[0][2][field]=status&filter[0][2][operator]==&filter[0][2][value]=Created";
-    return "bookings/get-bookings$filter$includes";
-  }
-}
-
-
-
+//
 ////////////////////////////////////////////////////////////////
 ///
 ///   NOTIFICATION END POINT

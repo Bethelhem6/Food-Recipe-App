@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:emebet/features/notification/data/model/notification.dart';
-import 'package:emebet/features/notification/domain/usecases/notifications_usecase.dart';
+import '../../data/model/notification.dart';
+import '../../domain/usecases/notifications_usecase.dart'; 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

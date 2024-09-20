@@ -1,7 +1,8 @@
-import 'package:emebet/core/network/error/failures.dart';
-import 'package:emebet/features/auth/data/model/auth_model.dart';
-import 'package:emebet/features/auth/data/model/parent.dart';
+ 
 import 'package:equatable/equatable.dart';
+
+import '../../../../core/network/error/failures.dart';
+import '../../data/model/auth_model.dart';
 
 abstract class AuthState extends Equatable {}
 
@@ -177,45 +178,4 @@ class AuthResetPasswordFaulire extends AuthState {
   @override
   List<Object?> get props => [];
 }
-
-///////////////////////////////////////////////////////////
-///
-class AuthGetParentLoading extends AuthState {
-  @override
-  List<Object?> get props => [];
-}
-
-class AuthGetParentSuccess extends AuthState {
-  final Parent parent;
-  AuthGetParentSuccess({required this.parent});
-  @override
-  List<Object?> get props => [];
-}
-
-class AuthGetParentFaulire extends AuthState {
-  final Failure failure;
-  AuthGetParentFaulire({required this.failure});
-  @override
-  List<Object?> get props => [];
-}
-
-///////////////////////////////////////////////////////////
-///
-class AuthUpdateParentLoading extends AuthState {
-  @override
-  List<Object?> get props => [];
-}
-
-class AuthUpdateParentSuccess extends AuthState {
-  final Parent parent;
-  AuthUpdateParentSuccess({required this.parent});
-  @override
-  List<Object?> get props => [];
-}
-
-class AuthUpdateParentFaulire extends AuthState {
-  final Failure failure;
-  AuthUpdateParentFaulire({required this.failure});
-  @override
-  List<Object?> get props => [];
-}
+ 

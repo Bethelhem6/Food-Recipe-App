@@ -1,4 +1,4 @@
-import 'package:emebet/shared/presentation/pages/background_page.dart';
+import '../../../shared/presentation/pages/background_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:webview_flutter/webview_flutter.dart';

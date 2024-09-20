@@ -1,12 +1,14 @@
-import 'package:emebet/features/auth/domain/models/auth_use_case.dart';
-import 'package:emebet/features/auth/presentaion/pages/change_password.dart';
-import 'package:emebet/features/auth/presentaion/pages/login.dart';
-import 'package:emebet/features/auth/presentaion/pages/verification.dart';
-import 'package:emebet/features/feedback/presentation/pages/delete_account.dart';
-import 'package:emebet/features/feedback/presentation/pages/feedback.dart';
-import 'package:emebet/features/int/onboarding/presentation/onboarding.dart';
-import 'package:emebet/features/notification/presentation/pages/notification.dart';
-import 'package:emebet/shared/presentation/widgets/app_bar.dart';
+import '../../features/auth/domain/models/auth_use_case.dart';
+import '../../features/auth/domain/models/screen_arguments.dart';
+import '../../features/auth/presentaion/pages/change_password.dart';
+import '../../features/auth/presentaion/pages/login.dart';
+import '../../features/auth/presentaion/pages/signup.dart';
+import '../../features/auth/presentaion/pages/verification.dart';
+import '../../features/feedback/presentation/pages/delete_account.dart';
+import '../../features/feedback/presentation/pages/feedback.dart';
+import '../../features/int/onboarding/presentation/onboarding.dart';
+import '../../features/notification/presentation/pages/notification.dart';
+import '../../shared/presentation/widgets/app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,11 +31,15 @@ class AppRouter {
           settings: RouteSettings(name: settings.name),
           builder: (_) => const LoginScreen(),
         );
-      // case HomeScreen.routeName:
-      //   return CupertinoPageRoute(
-      //     settings: RouteSettings(name: settings.name),
-      //     builder: (_) => const HomeScreen(),
-      //   );
+      case SignupScreen.routeName:
+        RegisterArguments registerArguments =
+            settings.arguments as RegisterArguments;
+        return CupertinoPageRoute(
+          settings: RouteSettings(name: settings.name),
+          builder: (_) => SignupScreen(
+            registerArguments: registerArguments,
+          ),
+        );
       case Profile.routeName:
         String name = settings.arguments as String;
         return CupertinoPageRoute(
