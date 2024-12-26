@@ -193,7 +193,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         size: Size.fromRadius(8),
                         activeSize: Size.fromRadius(8),
                         color: AppColors.grey400,
-                        activeColor: AppColors.primaryGreen,
+                        activeColor: AppColors.primaryColor,
                       ),
                     ),
                     Row(
@@ -215,7 +215,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           child: const Text(
                             "Sign in",
                             style: TextStyle(
-                                color: AppColors.primaryGreen,
+                                color: AppColors.primaryColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: AppFontSize.small),
                           ),

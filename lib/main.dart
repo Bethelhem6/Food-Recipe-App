@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               title: 'mvvm',
               scaffoldMessengerKey: snackBarKey,
               onGenerateRoute: AppRouter.generateRoute,
-              theme: appTheme,
+              theme: ThemeData.dark(),
               debugShowCheckedModeBanner: false,
               builder: DevicePreview.appBuilder,
               home: const SplashScreen(),

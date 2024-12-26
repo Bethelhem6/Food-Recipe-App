@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jailbreak_root_detection/jailbreak_root_detection.dart';
 import 'package:mvvm/core/utils/constant/app_assets.dart';
 import 'package:panara_dialogs/panara_dialogs.dart';
@@ -31,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: AppColors.primaryGreen,
+      statusBarColor: AppColors.primaryColor,
       statusBarIconBrightness: Brightness.light,
     ));
     isSecureDevice();

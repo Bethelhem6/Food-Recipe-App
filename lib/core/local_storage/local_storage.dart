@@ -53,7 +53,7 @@ class LocalStorage {
   ///   SET USER INFORMATION
   static Future setUserInformation(AuthModel profile) async {
     final prefs = sl<SharedPreferences>();
-    prefs.setString("name", profile.name ?? "");
+    prefs.setString("name", profile.name );
   }
 
   ///////////////////////////////////////////////
