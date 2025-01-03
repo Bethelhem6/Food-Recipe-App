@@ -10,12 +10,13 @@ import 'app_colors.dart';
 
 /// Light theme
 final ThemeData appTheme = ThemeData(
+  
   useMaterial3: true,
   dialogBackgroundColor: AppColors.lightGray,
   cardColor: AppColors.primaryColor,
   appBarTheme: AppBarTheme(
     // shadowColor: AppColors.lightGray,
-    color: AppColors.white,
+    backgroundColor: AppColors.backgroundColor,
     elevation: 2,
     toolbarTextStyle: const TextTheme(
       titleLarge: AppTextStyle.xxxLargeBlack,

@@ -1,14 +1,14 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:mvvm/firebase_options.dart';
-import '../../../core/router/router.dart';
-import '../../../core/utils/bloc_providers.dart';
-import '../features/int/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mvvm/features/home/presentation/pages/home_page.dart';
+import 'package:mvvm/firebase_options.dart';
 
+import '../../../core/router/router.dart';
+import '../../../core/utils/bloc_providers.dart';
 import 'core/styles/app_theme.dart';
 import 'core/utils/injections.dart';
 
@@ -65,14 +65,15 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           return MultiBlocProvider(
             providers: providers(),
             child: MaterialApp(
+
               key: navigatorKey,
               title: 'mvvm',
               scaffoldMessengerKey: snackBarKey,
               onGenerateRoute: AppRouter.generateRoute,
-              theme: ThemeData.dark(),
+              theme: appTheme,
               debugShowCheckedModeBanner: false,
               builder: DevicePreview.appBuilder,
-              home: const SplashScreen(),
+              home:  const HomePage(),
             ),
           );
         });
